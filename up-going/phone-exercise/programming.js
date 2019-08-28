@@ -1,13 +1,13 @@
-const spenging_threshold = 200;
-const tax_rate = 0.09;
-const phone_price = 99.99;
-const accessory_price = 9.99;
+const SPENDING_THRESHOLD = 200;
+const TAX_RATE = 0.09;
+const PHONE_PRICE = 99.99;
+const ACCESSORY_PRICE = 9.99;
 
 var bank_balance = 303.91;
 var amount = 0;
 
 function calculateTax(amount) {
-  return amount * tax_rate;
+  return amount * TAX_RATE;
 }
 
 function formatAmount(amount) {
@@ -16,10 +16,10 @@ function formatAmount(amount) {
 
 //keep buying phone while you still have money
 while (amount < bank_balance) {
-  amount = amount + phone_price;
+  amount = amount + PHONE_PRICE;
 
   if (amount < spenging_threshold) {
-    amount = amount + accessory_price;
+    amount = amount + ACCESSORY_PRICE;
   }
 }
 
